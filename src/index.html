@@ -9,12 +9,20 @@
         <header>
             <nav class="nav-bar">
                 <div class="nav-links">
-                    <a href="#home">Acceuil</a>
-                    <a href="#donate">Faire un don</a>
-                    <a href="#jmo">Journal de Marche Officiel</a>
+                    <a href="#home" class="button-generic">Acceuil</a>
+                    <a href="#donate" class="button-generic">Faire un don</a>
+                    <a href="#jmo" class="button-generic">Journal de Marche Officiel</a>
                 </div>
+                <a id="logo" href="https://www.ecole-air-espace.fr/">
+                    <img 
+                        src="../resources/images/EA.png"
+                        alt="Logo de l'école de l'air"
+                        class="logo-ea"
+                    >
+                </a>
             </nav>
         </header>
+
         <main>
             <section class="home" id="home">
                 <!-- <div class="bg-image-wrapper">
@@ -31,14 +39,65 @@
                             gravida, ex mauris auctor mauris, sit amet varius lacus purus in nulla. Phasellus ullamcorper
                             velit at ipsum. </p>
                     </div>
+                    <div class="donate-wrapper">
+                        <a class="btn-donate button-generic" href="www.google.fr">Faire un don</a>
+                    </div>
                 </div>
             </section>
+            <div class="flag">
+                <div class="flag-blue"></div><div class="flag-white"></div><div class="flag-red"></div>
+            </div>
+
             <section id="donate">
-                <div class="image-wrapper"></div>
-                <div class="donate-widget"></div>
+                <div class="donate-widget">
+                    <img alt="" src="../resources/images/widget-placeholder.PNG" class="temp-widget">
+                </div>
             </section>
+            <div class="flag">
+                <div class="flag-blue"></div><div class="flag-white"></div><div class="flag-red"></div>
+            </div>
+
             <section id="jmo">
+                <!-- <div class="image-wrapper">
+                    <img
+                        alt="Arrivée de la promotion 2023 pour la présentation au drapeau."
+                        src="../resources/images/2023_A701_277_X_003_003.jpg"
+                        class="side-img"
+                    >
+                </div> -->
                 <div class="desc-text">
+                    <div class="brigades">
+                        <img
+                            alt="Première brigade"
+                            src="../resources/images/Insigne_1B.png"
+                            class="brigade-img"
+                        >
+                        <img
+                            alt="Deuxième brigade"
+                            src="../resources/images/Insigne_2B.png"
+                            class="brigade-img"
+                        >
+                        <img
+                            alt="Troisième brigade"
+                            src="../resources/images/Insigne_3B.png"
+                            class="brigade-img"
+                        >
+                        <img
+                            alt="Quatrième brigade"
+                            src="../resources/images/Insigne_4B.png"
+                            class="brigade-img"
+                        >
+                        <img
+                            alt="Cinquième brigade"
+                            src="../resources/images/Insigne_5B.png"
+                            class="brigade-img"
+                        >
+                        <img
+                            alt="Sixième brigade"
+                            src="../resources/images/Insigne_6B.png"
+                            class="brigade-img"
+                        >
+                    </div>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla est sit amet semper
                         vehicula. Sed a diam vitae odio sagittis tincidunt et nec libero. Sed lobortis, sem ut rutrum
@@ -50,7 +109,9 @@
                     </p>
                 </div>
             </section>
+
         </main>
+
         <footer></footer>
     </body>
 </html>
