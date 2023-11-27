@@ -194,14 +194,17 @@ nav {
     background-color: var(--main-color);
 }
 
-.temp-widget {
-    position: absolute;
-    left: 50%;
+.donate-widget {
+    position: relative;
     top: 50%;
-    transform: translate(-50%, 100%);
+    transform: translate(0, -50%);
+}
 
+.temp-widget {
+    display: block;
     border: solid 2px var(--accent-color);
     border-radius: 8px;
+    margin: auto;
 
     width: 20%;
 }
