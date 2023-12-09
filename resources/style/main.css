@@ -38,11 +38,13 @@ nav {
     position: fixed;
     width: 90%;
     left: 5%;
+    top: 0;
     margin: 25px auto;
     background: var(--main-color-transperent);
     backdrop-filter: blur(10px);
     border-radius: 10px;
     z-index: 999;
+    transition: top 0.5s;
 }
 
 .logo-ea {
@@ -54,8 +56,9 @@ nav {
 
 .nav-links {
     width: 100%;
+    margin-left: 130px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .nav-links > a {
@@ -75,6 +78,8 @@ nav {
     width: 100%;
     height: 2px;
     display: flex;
+    position: relative;
+    z-index: 999;
 
     background: linear-gradient(90deg,
         #000091 0%,
@@ -124,6 +129,8 @@ nav {
     background-position: center;
     height: 100vh;
     width: 100%;
+    z-index: 999;
+    position: relative;
 }
 
 .title-box {
@@ -149,8 +156,10 @@ nav {
 }
 
 .btn-donate {
-    padding: 10px 30px;
+    padding: 18px 30px;
+    display: block;
     margin: auto;
+    width: 20%;
 
     font-size: larger;
 
@@ -192,6 +201,8 @@ nav {
     height: 100vh;
 
     background-color: var(--main-color);
+    position: relative;
+    z-index: 999;
 }
 
 .donate-widget {
@@ -209,15 +220,82 @@ nav {
     width: 20%;
 }
 
+/* Presentation */
+
+#presentation {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: var(--main-color-light);
+    z-index: 1;
+    position: relative;
+}
+
+.side-image {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.si-im1 {
+    rotate: 10deg;
+}
+
+.si-im2 {
+    rotate: 2deg;
+}
+
+.si-im3 {
+    rotate: -13deg;
+}
+
+.center-zone {
+    flex-shrink: 0;
+    width: 50vw;
+
+    text-align: center;
+    color: var(--neutral-color-light);
+    z-index: 999;
+}
+
+.center-zone > div > h1 {
+    font-size: 3vw;
+    margin-top: 50px;
+}
+
+.pres-text {
+    padding: 20px 10%;
+    margin: 50px auto;
+    background: linear-gradient(155deg,
+        var(--main-color-light) 0%,
+        var(--main-color) 100%
+    );
+    border-radius: 8px;
+    border: 2px solid var(--main-color-lighter);
+}
+
+.left-pictures, .right-pictures {
+    background-color: green;
+    height: 100%;
+}
+
+.left-pictures > div, .right-pictures > div {
+    top: 0;
+    position: sticky;
+    background-color: red;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+}
+
 /* jmo */
 
+/*
 #jmo {
     width: 100%;
     height: 100vh;
 
     display: flex;
 
-    /* background-color: var(--main-color); */
     background-color: var(--main-color-light);
 }
 
@@ -256,3 +334,4 @@ nav {
     height: 80px;
     margin: 0 3%;
 }
+*/
