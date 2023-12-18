@@ -129,7 +129,7 @@ nav {
     background-position: center;
     height: 100vh;
     width: 100%;
-    z-index: 999;
+    z-index: 998;
     position: relative;
 }
 
@@ -234,6 +234,7 @@ nav {
     display: block;
     margin: auto;
     width: 100%;
+    border-radius: 10px;
 }
 
 .si-im1 {
@@ -274,14 +275,12 @@ nav {
 }
 
 .left-pictures, .right-pictures {
-    background-color: green;
     height: 100%;
 }
 
 .left-pictures > div, .right-pictures > div {
     top: 0;
     position: sticky;
-    background-color: red;
     height: 100vh;
     display: flex;
     flex-flow: column;
