@@ -44,7 +44,7 @@
     margin: 0;
     box-sizing: border-box;
 
-    font-family: "Montserrat", serif;
+    font-family: "Montserrat", "Arial",serif;
 }
 
 .button-generic {
