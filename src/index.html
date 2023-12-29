@@ -3,6 +3,7 @@
     <head>
         <title>Promotion 2023 de l'École de l'air et de l'espace</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../resources/style/main.css">
     </head>
     <body>
@@ -75,7 +76,7 @@
                             >
                         </div>
                     </div>
-                    <div class="pres-block">
+                    <div class="pres-block responsive-reverse">
                         <div class="pres-small">
                             <img 
                                 src="../resources/images/IMG-20231218-WA0024.jpg"
@@ -172,7 +173,7 @@
                                 <p>METTRE UNE PHOTO</p>
                             </div>
                         </div>
-                        <div class="chiffre-col">
+                        <div class="chiffre-col responsive-reverse">
                             <div class="chiffres-img-wrapper">
                                 <p>METTRE UNE PHOTO</p>
                             </div>
@@ -203,7 +204,7 @@
                                 <p>METTRE UNE PHOTO</p>
                             </div>
                         </div>
-                        <div class="chiffre-col">
+                        <div class="chiffre-col responsive-reverse">
                             <div class="chiffres-img-wrapper">
                                 <p>METTRE UNE PHOTO</p>
                             </div>
@@ -232,12 +233,12 @@
             var prevScrollpos = window.pageYOffset;
             window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
-              if (prevScrollpos > currentScrollPos && currentScrollPos < 500) {
+            if (prevScrollpos > currentScrollPos && currentScrollPos < 500) {
                 document.getElementById("nav-bar").style.top = "0";
-              } else {
+            } else {
                 document.getElementById("nav-bar").style.top = "-150px";
-              }
-              prevScrollpos = currentScrollPos;
+            }
+            prevScrollpos = currentScrollPos;
             }
         </script>
     </body>

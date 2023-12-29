@@ -80,9 +80,14 @@ nav {
     transition: top 0.5s;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 800px) {
     nav {
-        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 90%;
+        flex-direction: column;
+        margin: 1rem auto;
     }
 }
 
@@ -159,6 +164,24 @@ h2 {
     text-align: center;
     font-size: 4rem;
     color: var(--main-color-20)
+}
+
+@media (max-width: 1200px) {
+    section > div {
+        width: 95%;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    h2 {
+        font-size: 2rem;
+        width: 96%;
+    }
 }
 
 /* home */
@@ -240,6 +263,21 @@ h1 {
     }
 }
 
+@media (max-width: 800px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .home-title > div {
+        width: 90%;
+    }
+
+    .home-title > div > p {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
 /* Donate */
 
 #donate {
@@ -292,6 +330,7 @@ h1 {
 
 .pres-block > div > p {
     padding: 1rem 0;
+    text-align: justify;
     line-height: 1.5rem;
 }
 
@@ -312,6 +351,16 @@ h1 {
 .pres-end > div > p {
     font-size: 1.3rem;
     text-align: center;
+}
+
+@media (max-width: 800px) {
+    .pres-block {
+        flex-direction: column;
+    }
+
+    .pres-wide, .pres-small {
+        width: 100%;
+    }
 }
 
 /*Chiffres*/
@@ -407,4 +456,30 @@ h1 {
     text-align: center;
     border-radius: var(--border-radius);
     background-color: var(--color-base-40);
+}
+
+@media (max-width: 1200px) {
+    .brigade > p:first-child {
+        margin-left: 2rem;
+    }
+    
+    .brigade > p:last-child {
+        margin-right: 2rem;
+    }
+
+    .chiffre-col-txt > h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .chiffre-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .responsive-reverse {
+        flex-direction: column-reverse;
+        gap: 1em;
+    }
 }
