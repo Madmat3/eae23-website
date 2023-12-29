@@ -80,6 +80,12 @@ nav {
     transition: top 0.5s;
 }
 
+@media (max-width: 1200px) {
+    nav {
+        margin: 0.5rem auto;
+    }
+}
+
 @media (max-width: 800px) {
     nav {
         position: absolute;
@@ -88,6 +94,12 @@ nav {
         width: 90%;
         flex-direction: column;
         margin: 1rem auto;
+    }
+}
+
+@media (max-height: 400px) {
+    nav {
+        display: none;
     }
 }
 
@@ -237,7 +249,7 @@ h1 {
 }
 
 .btn-donate {
-    width: 12em;
+    width: 20em;
     padding: 1em 2em;
     display: block;
     margin: 0 auto;
@@ -260,21 +272,38 @@ h1 {
 @media (max-width: 1200px) {
     h1 {
         font-size: 3rem;
+        padding-bottom: 8vh;
+    }
+
+    .home-title > div {
+        width: 90%;
+        padding-bottom: 6vh;
+    }
+
+    .btn-donate {
+        margin-top: 8vh;
     }
 }
 
 @media (max-width: 800px) {
     h1 {
         font-size: 2rem;
+        padding-bottom: 3vh;
     }
 
     .home-title > div {
         width: 90%;
+        padding-bottom: 16vh;
     }
 
     .home-title > div > p {
         font-size: 1rem;
         font-weight: 600;
+    }
+
+    .btn-donate {
+        margin-top: 3vh;
+        width: 14em;
     }
 }
 
