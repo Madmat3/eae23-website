@@ -10,9 +10,9 @@
     <body>
         <header>
             <nav class="nav-bar" id="nav-bar">
-                <a href="#home" class="button-generic">Acceuil</a>
                 <a href="https://www.ecole-air-espace.fr/" class="button-generic">L'école</a>
                 <a href="#presentation" class="button-generic">La promotion 2023</a>
+                <a href="#chiffres" class="button-generic">Le promo en chiffres</a>
                 <a href="#donate" class="button-generic">Faire un don</a>
             </nav>
         </header>
@@ -37,11 +37,11 @@
 
             <section id="presentation">
                 <div>
-                    <div class="pres-title">
+                    <div class="pres-title to-slide-in">
                         <h2>Mais qui sommes nous ?</h2>
                     </div>
                     <div class="pres-block">
-                        <div class="pres-wide">
+                        <div class="pres-wide to-slide-in">
                             <p>
                                 Chers Amis, partenaires et sympathisants de l'École
                                 de l'air et de l'espace,
@@ -84,7 +84,7 @@
                                 alt="placeholder"
                             >
                         </div>
-                        <div class="pres-wide">
+                        <div class="pres-wide to-slide-in">
                             <p>
                                 En effet, la cohésion, la solidarité, l'esprit de
                                 corps, la fraternité d'armes, sont des mots rendus
@@ -115,7 +115,7 @@
                     </div>
                     <div class="pres-end">
                         <div>
-                            <p>
+                            <p class="to-slide-in">
                                 Nous vous remercions par avance pour votre
                                 générosité et de l'intérêt que vous porterez à notre
                                 belle promotion !
@@ -141,7 +141,7 @@
                     </div>
                     <div class="chiffre-grid">
                         <div class="chiffre-col">
-                            <div class="chiffre-col-txt">
+                            <div class="chiffre-col-txt to-slide-in">
                                 <h3>6 brigades</h3>
                                 <ul>
                                     <li class="brigade">
@@ -178,7 +178,7 @@
                             <div class="chiffres-img-wrapper">
                                 <p>METTRE UNE PHOTO</p>
                             </div>
-                            <div class="chiffre-col-txt">
+                            <div class="chiffre-col-txt to-slide-in">
                                 <h3>Une diversité de cursus</h3>
                                 <ul>
                                     <li><i>Cursus Master</i> - <b>Sciences de l'ingénieur</b></li>
@@ -192,7 +192,7 @@
                             </div>
                         </div>
                         <div class="chiffre-col">
-                            <div class="chiffre-col-txt">
+                            <div class="chiffre-col-txt to-slide-in">
                                 <h3>Un vivier de spécialités</h3>
                                 <ul>
                                     <!--Ajouter une liste (non exhausitve ?) de métiers dans chaque spés ?-->
@@ -231,6 +231,7 @@
         <footer></footer>
 
         <script>
+            // Affichage / Masquage de la barre de menu
             var prevScrollpos = window.pageYOffset;
             window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
@@ -241,6 +242,32 @@
             }
             prevScrollpos = currentScrollPos;
             }
+
+            // Déclenchement des animations
+            const startAnimation = (entries, observer) => {
+                entries.forEach(entry => {
+                    entry.target.classList.toggle("slide-in-from-bottom", entry.isIntersecting);
+                });
+            };
+
+            const observer = new IntersectionObserver(startAnimation);
+            const options = {root: null, rootMargin: '0px', threshold: 1};
+
+            const elements = document.querySelectorAll('.to-slide-in');
+            elements.forEach(el => {
+                observer.observe(el, options);
+            })
+
+            // Défilement
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
         </script>
     </body>
 </html>
