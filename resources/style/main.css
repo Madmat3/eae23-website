@@ -39,6 +39,47 @@
     --border-radius: 8px;
 }
 
+.dark-mode {
+    --color-base: #303030;
+    --color-base-100: #0d0d0d;
+    --color-base-90: #111318;
+    --color-base-80: #20232d;
+    --color-base-70: #353b4b;
+    --color-base-60: #737373;
+    --color-base-50: #8c8c8c;
+    --color-base-40: #a6a6a6;
+    --color-base-30: #bfbfbf;
+    --color-base-20: #4a5368;
+    --color-base-10: #f2f2f2;
+    --color-base-00: #ffffff;
+
+    --main-color: #061530;
+    --main-color-transperent: #08215080;
+    --main-color-90: #030a17;
+    --main-color-80: #091e44;
+    --main-color-70: #0e3271;
+    --main-color-60: #14459f;
+    --main-color-50: #1a59cc;
+    --main-color-40: #3373e5;
+    --main-color-30: #6092eb;
+    --main-color-20: #8eb1f1;
+    --main-color-20-transparent: #8eb1f120;
+    --main-color-10: #bbd0f6;
+    --main-color-10-transparent: #bbd0f680;
+    --main-color-00: #e8effc;
+
+    --accent-color: #af770d;
+    --accent-color-transparent: #af770d20;
+    --accent-color-00: #181002;
+    --accent-color-10: #473005;
+    --accent-color-20: #775109;
+    --accent-color-30: #a6710c;
+    --accent-color-40: #d69110;
+    --accent-color-50: #efab29;
+
+    --border-radius: 8px;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -55,6 +96,10 @@
     text-align: center;
     text-decoration: none;
     font-weight: 500;
+}
+
+.theme-switch {
+    padding: 8px 1rem;
 }
 
 /* Header */
@@ -81,9 +126,27 @@ nav {
     transition: top 0.5s;
 }
 
+nav > a {
+    color: #e8effc;
+
+    padding: 8px 30px;
+    margin: 8px 10px;
+}
+
+nav > a:hover {
+    background: #bbd0f680;
+    color: #091e44;
+    backdrop-filter: blur(30px);
+    cursor: pointer;
+}
 @media (max-width: 1200px) {
     nav {
         margin: 0.5rem auto;
+    }
+
+    nav > a {
+        padding: 8px 0.5rem;
+        margin: 8px 10px;
     }
 }
 
@@ -102,19 +165,6 @@ nav {
     nav {
         display: none;
     }
-}
-
-nav > a {
-    color: var(--main-color-90);
-
-    padding: 8px 30px;
-    margin: 8px 10px;
-}
-
-nav > a:hover {
-    background: var(--main-color-80-transparent);
-    color: var(--main-color-10);
-    backdrop-filter: blur(30px);
 }
 
 .flag {
@@ -224,7 +274,7 @@ h2 {
         rgba(0,0,0,0.4) 20%,
         rgba(0,0,0,0.4) 80%,
         rgba(0,0,0,0.2) 100%);
-    color: var(--color-base-100);
+    color: #fff;
 }
 
 .home-title > div {
@@ -287,7 +337,7 @@ h2 {
     border: solid 2px var(--accent-color);
     background-color: var(--accent-color-transparent);
     backdrop-filter: blur(2px);
-    color: var(--color-base-100);
+    color: #fff;
 }
 
 .btn-donate:hover {
